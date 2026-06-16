@@ -1,0 +1,11 @@
+
+
+Create plan for building AI agenet System for PRIM drug screening. 
+Here are requirements:
+1. all components should be run locally.
+    The components could be langchain claude code and qwen etc
+2. input PRIM data are MFI, treatment information, and pooling and readme file in csv.
+3. knowledge and background data are PRISM publications in pdf.
+
+results:
+1. present steps and python coding

@@ -1,0 +1,40 @@
+# Create virtual environment
+python -m venv prim_agent_env
+source prim_agent_env/bin/activate  # Linux/Mac
+# or .\prim_agent_env\Scripts\activate  # Windows
+
+# Install core dependencies
+pip install pandas numpy scipy scikit-learn
+pip install rdkit-pypi  # cheminformatics
+pip install pymupdf  # PDF text extraction
+pip install sentence-transformers  # local embeddings
+pip install faiss-cpu  # vector database
+pip install langchain langchain-community
+pip install ollama  # local LLM runner
+
+# install local LLM
+# Install Ollama (macOS)
+brew install ollama
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+#run ollama
+ollama --version
+sudo systemctl start ollama
+
+
+# Pull a model (choose based on your RAM)
+ollama pull phi3  # ~2.5GB, fast
+# or for better quality:
+ollama pull qwen2.5  # ~4.5GB
+# or PRISM-optimized model:
+ollama pull dcostenco/prism-coder:4b  # ~2.5GB, offline tool-calling
+
+
+#install claude code
+curl -fsSL https://claude.ai/install.sh | bash
+ollama pull claude
+
+ollama launch claude
+
+ollama ls
