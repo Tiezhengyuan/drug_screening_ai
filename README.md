@@ -1,2 +1,2 @@
-# PRISM_AI
-AI agent for Pioneering large-scale cancer therapeutic mapping (PRISM)
+# AI agent for therapeutic drug screening
+- Pioneering large-scale cancer therapeutic mapping (PRISM)
